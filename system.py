@@ -59,7 +59,7 @@ print (f"Palpites dos times visitante: {palpitesTimeVisitante1}, {palpitesTimeVi
 
 for i in range (numeroPalpites):
     pontos = 0
-    if golsTimesCasa[i] == palpitesTimeCasa1[i] and golsTimesFora[i] == palpitesTimeVisitante2[i]:
+    if golsTimesCasa[i] == palpitesTimeCasa1[i] and golsTimesFora[i] == palpitesTimeCasa2[i]:
         pontos = 3
     elif (golsTimesCasa[i] == palpitesTimeCasa1[i] and golsTimesFora[i] != palpitesTimeCasa2[i]) or (golsTimesCasa[i] != palpitesTimeCasa1[i] and golsTimesFora[i] == palpitesTimeCasa2[i]):
         pontos = 2
@@ -75,9 +75,9 @@ for i in range (numeroPalpites):
     pontos = 0
     if golsTimesCasa[i] == palpitesTimeVisitante1[i] and golsTimesFora[i] == palpitesTimeVisitante2[i]:
         pontos = 3
-    elif (golsTimesCasa[i] == palpitesTimeVisitante1[i] and golsTimesFora[i] != palpitesTimeCasa2[i]) or (golsTimesCasa[i] != palpitesTimeVisitante1[i] and golsTimesFora[i] == palpitesTimeCasa2[i]):
+    elif (golsTimesCasa[i] == palpitesTimeVisitante1[i] and golsTimesFora[i] != palpitesTimeVisitante2[i]) or (golsTimesCasa[i] != palpitesTimeVisitante1[i] and golsTimesFora[i] == palpitesTimeVisitante2[i]):
         pontos = 2
-    elif (golsTimesCasa[i] - golsTimesFora[i] == palpitesTimeVisitante1[i] - palpitesTimeCasa2[i]):
+    elif (golsTimesCasa[i] - golsTimesFora[i] == palpitesTimeVisitante1[i] - palpitesTimeVisitante2[i]):
         pontos = 1
     else:
         pontos = 0
@@ -85,9 +85,16 @@ for i in range (numeroPalpites):
     pontuaçãoTotalVisitante += pontos
     print (f"Pontuação do {timeVisitante} no {i + 1}º jogo: {pontos}")
 
-
+print ("----------------------------------")
 print ("----------------------------------")
 print (f"Pontuação total do {timeCasa}: {pontuaçãoTotalCasa} pontos!")
 print (f"Pontuação total do {timeVisitante}: {pontuaçãoTotalVisitante} pontos!")
 
-
+if pontuaçãoTotalCasa > pontuaçãoTotalVisitante:
+    print (f"O time {timeCasa} venceu!")
+elif pontuaçãoTotalVisitante > pontuaçãoTotalCasa:
+    print (f"O time {timeVisitante} venceu!")
+elif pontuaçãoTotalCasa == pontuaçãoTotalVisitante:
+    print ("Houve um empate no placar final!")
+print ("----------------------------------")
+print ("Obrigado por utilizar o validador de palpites, volte sempre!")
