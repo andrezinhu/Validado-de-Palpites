@@ -91,9 +91,9 @@ print (f"Pontuação total do {timeCasa}: {pontuaçãoTotalCasa} pontos!")
 print (f"Pontuação total do {timeVisitante}: {pontuaçãoTotalVisitante} pontos!")
 
 if pontuaçãoTotalCasa > pontuaçãoTotalVisitante:
-    print (f"O time {timeCasa} venceu!")
+    print (f"O {timeCasa} venceu!")
 elif pontuaçãoTotalVisitante > pontuaçãoTotalCasa:
-    print (f"O time {timeVisitante} venceu!")
+    print (f"O {timeVisitante} venceu!")
 elif pontuaçãoTotalCasa == pontuaçãoTotalVisitante:
     print ("Houve um empate no placar final!")
 print ("----------------------------------")
