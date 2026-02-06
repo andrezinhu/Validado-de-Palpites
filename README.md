@@ -10,3 +10,5 @@
 * Por fim, informamos na mesma ordem os nossos palpites, para assim, o sistema verificar automaticamente quantos pontos foram feitos
 
 **Adicionado nome dos times competindo e mensagem de vencedor no confronto**
+
+**Adicionado pacotes próprios para mais organização no código**
